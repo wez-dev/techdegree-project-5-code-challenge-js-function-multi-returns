@@ -1,32 +1,34 @@
 function isFieldEmpty() {
 
-    const field = document.querySelector("#info");
+  const field = document.querySelector("#info");
+  
+  // If field.value DOES NOT have value
+  if (!field.value) {
+  
+    return true;
     
-    if (field.value === "") {
-    
-      return true;
-      
-    } else {
-    
-      return false;
-    
-    }
-    
+  } else {
+  
+    return false;
+  
   }
   
+}
+
+
+function submit() {
+
+  const fieldTest = isFieldEmpty();
+   
+  // If fieldTest is true
+  if (fieldTest) {
   
-  function submit() {
+    alert("The input field is empty");
+    
+  } else {
   
-    const fieldTest = isFieldEmpty();
-     
-    if (fieldTest === true) {
-    
-      alert("The input field is empty");
-      
-    } else {
-    
-      alert("The field is filled");
-    
-    }
-    
+    alert("The field is filled");
+  
   }
+  
+}
